@@ -21,10 +21,48 @@ var p7 = new Person("Anton", "blue", 5);
 var p8 = new Person("Catty", "back", 9);
 var p9 = new Person("Azik", "blue", 15);
 
-console.log(p1.name, p1.age, p1.eyeColor);
+// console.log(p1.name, p1.age, p1.eyeColor);
 
 // function call
-console.log(p1.updateAge());
+// console.log(p1.updateAge());
+
+/* ex2 */
+
+function Car(Make, Model, Year){
+    this.Make = Make;
+    this.Model = Model;
+    this.Year = Year;
+    this.Change = function(){
+
+        return this.Model;
+    };
+};
+
+var car1 = new Car("BMW", "serial-7", 2017);
+console.log(car1.Change());
+
+var car2 = new Car("Ford", "Mustang", 2019);
+console.log(car2.Change());
+
+/* ex3 */
+
+function Dog(name, play, noise){
+    this.name = name;
+    this.play = play;
+    this.noise = noise;
+    this.happy = function(){
+        // if(this.play === true){
+        //     console.log("They are happy");
+        // }
+        return this.noise;
+    }
+}
+var nPlay = new Dog("Dog","with Cat", "WOOOOOOF");
+console.log(nPlay.name);
+console.log(nPlay.play);
+console.log(nPlay.happy());
+
+
 
 
 
